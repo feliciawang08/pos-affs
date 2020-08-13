@@ -9,12 +9,12 @@ router.get('/new', (req, res) => {
 router.get('/:id', async (req, res) => {
     const article = await Article.findById(req.params.id)
     if (article == null) res.redirect('/')
-    res.send('/articles/show', { article: article })
+    res.send('articles/show', { article: article })
 })
 
 router.post('/', async (req, res) => {
     let article = new Article({
-        title: req.body.tilte,
+        title: req.body.title,
         description: req.body.description,
         markdown: req.body.markdown
     })
