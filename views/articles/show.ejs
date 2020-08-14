@@ -10,13 +10,24 @@
 </head>
 <body>
 	<div class="container">
-		<h1 class="mb-4"><%= article.title %></h1>
-		<div class="text-muted mb-2"><%= article.createdAt.toLocaleDateString() %></div>
-		<a href="/" class="btn btn-secondary">All Articles</a>
-		<a href="/articles/edit/<%= article.id %>" class="btn btn-info">Edit</a>
-
-		<div>
-			<%- article.sanitizedHtml %>
+		<h1 class="my-4">
+			<center>
+				<%= article.title %>
+			</center>
+		</h1>
+		<div class="text-muted mb-2">
+			<center>
+				<%= article.createdAt.toLocaleDateString() %>
+			</center>
+		</div>
+		<div class="my-4">
+			<center>
+				<a href="/" class="btn btn-secondary">all affirmation posts</a>
+				<a href="/articles/edit/<%= article.id %>" class="btn btn-info">edit</a>
+				<div class="my-4">
+					<%- article.sanitizedHtml %>
+				</div>
+			</center>
 		</div>
 	</div>
 </body>

@@ -10,22 +10,34 @@
 </head>
 <body>
 	<div class="container">
-		<h1 class="mb-4">Blog Articles</h1>
-		<a href="/articles/new" class="btn btn-success">New Article</a>
-
+		<h1 class="my-4">
+			<center>positive affirmations only.</center>
+		</h1>
+		<h6 class="mb-4">
+			<center>your personal space for uplifting notes and affirmations.</center>
+		</h6>
+		<div>
+			<center>
+				<a href="/articles/new" class="btn btn-success">
+					<center>new affirmation post</center>
+				</a>
+			</center>
+		</div>
 		<% articles.forEach(article => { %>
 			<div class="card mt-4">
+				<center>
 				<div class="card-body">
 					<h4 class="card-title"><%= article.title %></h4>
 					<div class="card-subtitle text-muted mb-2">
 						<%= article.createdAt.toLocaleDateString() %>
 					</div>
 					<div class="card-text mb-2"><%= article.description %></div>
-					<a href="articles/<%= article.slug %>" class="btn btn-primary">Read More</a>
+					<a href="articles/<%= article.slug %>" class="btn btn-primary">read more</a>
 					<form action="/articles/<%= article.id %>?_method=DELETE" method="POST" class="d-inline">
-						<button type="submit" class="btn btn-danger">Delete</button>
+						<button type="submit" class="btn btn-danger">delete</button>
 					</form>
-				</div>
+				</center>
+			</div>
 				
 			</div>
 		<% }) %>
