@@ -3,6 +3,7 @@ Simplistic markdown-type blog for creating personal posts of positive affirmatio
 Utilizes Node.js, Express, and MongoDB.
 
 ## How To Run:
+Make sure you have MongoDB installed.
 After cloning, run the following in the project directory terminal:
 1. `npm i express mongoose ejs`
 2. `npm i --save-dev nodemon`
